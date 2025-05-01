@@ -4,7 +4,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, filters
 
 TELEGRAM_TOKEN = "7519203557:AAHodua1TcVgCQqTCtW0vOXLaerrs-p-OU4"
-OPENROUTER_API_KEY = "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"
+
+import os
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 # Загружаем базу знаний из файла
 def load_knowledge():
